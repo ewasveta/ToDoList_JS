@@ -1,0 +1,104 @@
+*
+{    
+    color:darkcyan;    
+    font-size: 2vmax;
+    border: 0; 
+}
+h1, 
+main
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+header
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;   
+}
+button
+{
+    background-color: darkcyan;
+    color: white;
+    border:0;
+    border-radius: 15%;
+    width: 6vmax;
+}
+input[type="text"]
+{
+    height: 2em;
+    margin-right: 4%;
+    padding-left: 2%;
+    flex-grow: 8;
+}
+::placeholder 
+{
+    color: lightgray;
+    opacity: 1; /* Firefox */
+}
+li, 
+header input[type="text"]
+{
+    border: 2px solid lightgrey; 
+}
+h1
+{
+    font-family: algerian, courier;
+    font-weight:normal;
+    font-size: 6vmax;
+}
+ul
+{
+    list-style-type:none;
+    padding-left: 0;
+}
+ul li 
+{
+    display: flex;  
+    align-items: center; 
+    margin-left: 4%;
+    height: 2em;
+}
+.fa-trash-can
+{
+    margin-right: 2%;
+}
+
+input[type="checkbox"]:checked 
+{
+    background: darkcyan;
+    color: white;
+    border: 2px solid darkcyan;
+}
+input[type="checkbox"] 
+{
+    cursor: pointer;
+    appearance: none;
+    outline: 0;
+    background: white;
+    height: 16px;
+    width: 16px;
+    border: 2px solid lightgray;
+    color: white;
+}
+input[type="checkbox"]:after
+{
+    content: ' ';
+    position: relative;
+    left: 40%;
+    top: 20%;
+    width: 15%;
+    height: 40%;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(50deg);
+    display: none;
+}
+input[type="checkbox"]:checked:after 
+{
+    display: block;
+}
+.strikethrough
+{
+    text-decoration: line-through;
+}
