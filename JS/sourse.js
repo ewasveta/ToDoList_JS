@@ -67,11 +67,11 @@ class TaskLI
 function addTask()
 {
     let descript = document.querySelector("#taskIn").value;
-    
+
     if(descript)
     {
         let task = 
-            new TaskLI( document.querySelector("#taskIn").value );
+            new TaskLI( descript );
             
         task.addToLocalStorage();  
     }  
