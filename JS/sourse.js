@@ -1,16 +1,16 @@
 //localStorage.clear();
-window.addEventListener('load', ()=>
+class GC
 {
-    for(let i=0; i<localStorage.length; i++)
+    destructTLI( taskLI )
     {
-        new TaskLI(localStorage.key(i));
+        taskLI = null;
     }
-});
-
-class TaskLI 
+}
+class TaskLI extends GC 
 {
     constructor (descript)
     {
+        super();
         this.descript = descript;      
  
         this.li = document.createElement("LI");
@@ -47,6 +47,8 @@ class TaskLI
                         "type your Task here"; 
 
                     localStorage.removeItem(this.descript);  
+
+                    this.destructTLI(this);
                 }          
             });
         this.li.appendChild(this.trash);     
@@ -63,6 +65,14 @@ class TaskLI
         localStorage.setItem(this.descript, `${(new Date()).toLocaleString()}`);
     }
 }
+
+window.addEventListener('load', ()=>
+{
+    for(let i=0; i<localStorage.length; i++)
+    {
+        new TaskLI(localStorage.key(i));
+    }
+});
 
 function addTask()
 {
